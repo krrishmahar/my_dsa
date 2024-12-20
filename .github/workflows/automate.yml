@@ -3,7 +3,7 @@ name: Auto commit changes
 on:
   push:
     paths:
-      - '**/*'
+      - 'src/**'
   workflow_dispatch: 
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
         token: ${{ secrets.AUTOMATE_TOKEN }}
 
     - name: Wait for 40 minutes
-      run: sleep 30
+      run: sleep 2400
 
     - name: Configure, Commit and Push
       run: |
