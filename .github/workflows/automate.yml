@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'src/**'
+  schedule:
+    - cron: "36 7 * * *"
   workflow_dispatch: 
 
 jobs:
@@ -17,9 +19,6 @@ jobs:
         ref: 'automate'
         repository: 'krrishmahar/my_dsa'
         token: ${{ secrets.AUTOMATE_TOKEN }}
-
-    - name: Wait for 40 minutes
-      run: sleep 2400
 
     - name: Configure, Commit and Push
       run: |
