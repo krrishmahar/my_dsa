@@ -3,7 +3,9 @@ name: Auto commit changes
 on:
   push:
     paths:
-      - '**/*'
+      - 'src/**'
+  schedule:
+    - cron: "0 0 * * 0"
   workflow_dispatch: 
 
 jobs:
@@ -17,9 +19,6 @@ jobs:
         ref: 'automate'
         repository: 'krrishmahar/my_dsa'
         token: ${{ secrets.AUTOMATE_TOKEN }}
-
-    - name: Wait for 40 minutes
-      run: sleep 30
 
     - name: Configure, Commit and Push
       run: |
