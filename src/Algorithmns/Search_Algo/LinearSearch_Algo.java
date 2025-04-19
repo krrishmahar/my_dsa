@@ -65,6 +65,15 @@ public class LinearSearch_Algo {
         return false;
     }
 
+    static int lSearch(int[] arr, int target){
+        if (arr.length == 0) return Integer.MIN_VALUE;
+        for (int i: arr){
+            if (arr[i] == target)
+                return i;
+        }
+        return  Integer.MAX_VALUE;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] nums = {12, 3, 1, 3, 1352};
