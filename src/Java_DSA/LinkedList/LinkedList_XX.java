@@ -2,12 +2,12 @@ package Java_DSA.LinkedList;
 
 import Algorithmns.Sort_Algo.BubbleSort_Algo;
 
-public class LinkedList_XX {
+public class LinkedList_XX extends Colors {
 
-    public Node head;
-    protected Node tail; //creating this extra variable helps to directly insert at tail
+     Node head;
+     static Node tail; //creating this extra variable helps to directly insert at tail
     //hence, complexity is O(1)
-    protected int size;
+     static int size;
 
     public LinkedList_XX() {
         this.size = 0;
@@ -32,7 +32,25 @@ public class LinkedList_XX {
         if (tail == null) {
             tail = head;
         }
+        size += 1;
+    }
+
+    public void insertNode(Node node){
+        node.next = head;
+        head = node;
+        if (tail == null) tail = head;
         size++;
+    }
+
+    public void displayNode(){
+        if (head != null) {
+            Node temp = head;
+            while (temp != null) {
+                System.out.printf(Colors.ANSI_BLUE + "%d -> ", temp.value);
+                temp = temp.next;
+            }
+            System.out.println(ConsoleColors.RED + "END" + Colors.ANSI_RESET);
+        }
     }
 
     public void insertLast(int val) {
@@ -127,7 +145,7 @@ public class LinkedList_XX {
         return null;
     }
 
-    public class Node {
+    public static class Node {
 
 
         public int value;
@@ -238,15 +256,22 @@ public class LinkedList_XX {
 //        System.out.println(list.deleteFirst());
 
         LinkedList_XX list = new LinkedList_XX();
-        for (int i = 4; i > 0; i--) {
+        for (int i =1; i <= 5; i++) {
             list.insertLast(i);
+//            System.out.println(i);
         }
+
+        tail.next = new Node(11);
+        size++;
+
+        list.deleteLast();
 //        list.display();
 //        list.bubbleSort();
-        list.display();
+        list.displayNode();
 
-        list.reverse(list.head);
-        list.display();
+//        list.reverse(list.head);
+//        list.display();
+
 
 
     }
