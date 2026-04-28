@@ -16,6 +16,12 @@ public class StringBuilder_07 {
     //String name = "Krrish";
     //String name = "Krrish Mahar"; //gives error due to immutability.
 
+    //Strings are Immutable due to Security reason, basic explanation below
+    //In java, string pool inside of heap memory has Immutability and optimization(reference)
+    //Such that String a,b = "Krrish"; will refer to one memory in string pool to avoid multiple copies
+    //If a = "Mahar" it shouldn't change password for all other with same value
+    // but create new memory of "Mahar" in string pool and change a reference to that memory
+
 
 //    Internal Working of String :
 //    String   name = "Krrish";
