@@ -26,19 +26,7 @@ public class validAnagram {
         return true;
     }
 
-
-    static void main() {
-        String s = "Anagram", t = "nagaram";
-        boolean mal = isAnagram(s,t);
-        System.out.println(isAnagram("ANAGRAM",t));
-
-        System.out.println(mal);
-
-    }
-}
-
-class MySolution {
-    boolean isAnagram(String s, String t) {
+    boolean isAnagram2(String s, String t) {
 
         if (s.length() != t.length()) return false;
 
@@ -57,4 +45,15 @@ class MySolution {
 
         return true;
     }
+
+
+    static void main() {
+        String s = "Anagram", t = "nagaram";
+        boolean mal = isAnagram(s,t);
+        System.out.println(isAnagram("ANAGRAM",t));
+
+        System.out.println(mal);
+
+    }
 }
+
