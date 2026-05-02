@@ -21,13 +21,6 @@ public class MajorityElement {
     return curr;
     }
 
-    static int majorityElement2(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>(nums.length/2);
-        for (int i = 0; i< nums.length; i++) {
-            if (map.containsKey(nums[i])) map.replace(nums[i], map.get(nums[i]) + 1);
-        }
-return -1;
-    }
 
     static void main() {
         int[] nums = new int[] {1,1,1,1,4,3,2,1,4};
