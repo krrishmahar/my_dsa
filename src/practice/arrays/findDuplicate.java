@@ -1,7 +1,4 @@
-package practice;
-
-import java.util.HashMap;
-import java.util.Map;
+package practice.arrays;
 
 //https://leetcode.com/problems/find-the-duplicate-number/
 //Ques says No extra space and no modification to array nums

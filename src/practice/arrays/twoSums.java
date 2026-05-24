@@ -1,6 +1,4 @@
-package practice;
-
-import Java_DSA.OOPs.EnumExample.A;
+package practice.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
