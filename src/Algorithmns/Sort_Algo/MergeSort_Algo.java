@@ -46,13 +46,14 @@ public class MergeSort_Algo {
     }
 
     public static void main(String[] args) {
-        int[] arr1 = {9, 3, 7, 5, 6, 2, 8};
+//        int[] arr1 = {9, 3, 7, 5, 6, 2, 8};
+        int[] arr1 = {2,8,6,4};
         mergeSort(arr1);
         System.out.println("Recursive: " + java.util.Arrays.toString(arr1));
 
-        int[] arr2 = {4, 1, 9, 6, 3, 8};
-        mergeSort(arr2);
-        System.out.println("Iterative: " + java.util.Arrays.toString(arr2));
+//        int[] arr2 = {4, 1, 9, 6, 3, 8};
+//        mergeSort(arr2);
+//        System.out.println("Iterative: " + java.util.Arrays.toString(arr2));
     }
     }
 
