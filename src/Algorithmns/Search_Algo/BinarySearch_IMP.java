@@ -76,7 +76,7 @@ public class BinarySearch_IMP {
         return start;//condition that changes code
     }
 
-    //returns smaller No. or target No.
+    //Floor -> returns smaller No.
     static int Floor(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;

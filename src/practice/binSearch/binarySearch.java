@@ -2,9 +2,11 @@ package practice.binSearch;
 
 public class binarySearch {
     static void main() {
+//        Agnostic == Irrelevent // Order Agnostic == Order Irrelevent
         int[] nums = new int[] {1,2,3,4,5,6,7,8,9};
-        int ans = binarySearch(nums,5);
-        int ans2 = binSearchRecursive(nums,6);
+        int[] nums2 = {9,8,7,6,5,4,3,2,1};
+        int ans = binarySearch(nums,8);
+        int ans2 = binarySearch(nums2,8);
         System.out.println(ans);
         System.out.println(ans2);
 
@@ -17,9 +19,11 @@ public class binarySearch {
         while (low <= high) {
             int mid = low + (high - low)/2;  //Not (high+low)/2 or high + (low-high)/2   to avoid int overflow
             if (nums[mid] < target) {
-                low =  mid + 1;
+//                low = mid + 1;
+                high =  mid - 1;
             } else if (nums[mid] > target) {
-                high = mid - 1;
+//                high =  mid - 1;
+                low = mid + 1;
             } else {
                 return mid;
             }
