@@ -1,6 +1,5 @@
 package Java_DSA.Maths;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class BitwiseOperator_11 {

@@ -1,7 +1,5 @@
 package Java_DSA;
 
-import java.util.Arrays;
-
 public class Space_Time_10 {
 
     //You must see notebook for detailed explanation.

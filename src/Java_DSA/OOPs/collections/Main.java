@@ -20,14 +20,18 @@ public class Main implements Cloneable {
         //Vectors are single threaded such that they are slower than ArrayList
 
 
+
         int[] arr1 = new int[6];    //Static array declaration
         int[] arr2 = new int[]{5, 41, 5, 12, 21, 21};    // Dynamic array declaration with initialization
         for (int i = 0; i < arr1.length; i++) {     //initialization of static array via deep-copy
             arr1[i] = arr2[i];
         }
+        System.out.println(Arrays.equals(arr1, arr2));
+        System.out.println(arr1 == arr2);
         System.out.println(Arrays.toString(arr1));  //printing aar1
         System.out.println(Arrays.toString(arr2));  //printing aar2
 
+        System.gc();
         ArrayList<Integer> list = new ArrayList<>();
         // By default, ArrayList has initial capacity of 10 values only But....
         for (int i = 1; i <= 40; i++) {
@@ -35,6 +39,8 @@ public class Main implements Cloneable {
         }
         System.out.println(list);
 
+        Map<String, String> ans =  System.getenv();
+//        System.out.println(ans);
 
 //        System.out.println("----------------------------");
 //        arr1[0] = 11;

@@ -1,7 +1,5 @@
 package Java_DSA;
 
-import java.util.Scanner;
-
 public class Switch_03 {
 
     public static void main(String[] args) {

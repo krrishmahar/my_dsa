@@ -1,7 +1,5 @@
 package Java_DSA.OOPs.Interfaces;
 
-import Java_DSA.OOPs.accessModifier.Main;
-
 public class Car implements Engine, Brake, Media {
 
 

@@ -1,6 +1,9 @@
 package ques.week7;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 
 public class Hashmap {
 

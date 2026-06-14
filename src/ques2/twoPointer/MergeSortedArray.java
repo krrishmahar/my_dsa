@@ -1,5 +1,7 @@
 package ques2.twoPointer;
-import java.util.*;
+
+import java.util.Arrays;
+
 public class MergeSortedArray {
 
 //    Solution: https://leetcode.com/problems/merge-sorted-array/solutions/6487936/thought-process-for-merge-sorted-array-p-tn8g/

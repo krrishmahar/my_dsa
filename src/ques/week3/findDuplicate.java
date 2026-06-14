@@ -1,8 +1,5 @@
 package ques.week3;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class findDuplicate {
 
     public static void main(String[] args) {

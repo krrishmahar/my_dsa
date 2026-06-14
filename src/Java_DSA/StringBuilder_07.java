@@ -1,8 +1,5 @@
 package Java_DSA;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Optional;
 import java.util.Scanner;
 
 public class StringBuilder_07 {

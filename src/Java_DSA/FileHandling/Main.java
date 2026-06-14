@@ -2,8 +2,6 @@ package Java_DSA.FileHandling;
 
 import java.io.*;
 
-import static java.lang.Thread.sleep;
-
 public class Main {
 
     static void inputSR(){

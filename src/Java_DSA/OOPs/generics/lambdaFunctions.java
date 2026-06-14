@@ -1,11 +1,5 @@
 package Java_DSA.OOPs.generics;
 
-import Java_DSA.OOPs.accessModifier.A;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.function.Consumer;
-
 public class lambdaFunctions {
 
     public static void main(String[] args) {

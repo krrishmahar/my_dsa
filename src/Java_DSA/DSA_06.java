@@ -16,8 +16,6 @@ package Java_DSA;
 //-> Expensive, as Cache space, SSDs are very expensive.
 
 
-import java.util.Arrays;
-
 //Below examples of data structures.
 
 //Question : Maximum wealth of a person in an 2D array =>

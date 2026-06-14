@@ -1,8 +1,6 @@
 package Java_DSA.LinkedList;
 
-import Algorithmns.Sort_Algo.BubbleSort_Algo;
-
-public class LinkedList_XX extends Colors {
+public class  LinkedList_XX extends Colors {
 
      Node head;
      static Node tail; //creating this extra variable helps to directly insert at tail

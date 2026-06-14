@@ -1,10 +1,8 @@
 package Java_DSA.OOPs.generics.comparators;
 
-import Java_DSA.OOPs.accessModifier.A;
 import Java_DSA.OOPs.generics.Student;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Main {
 

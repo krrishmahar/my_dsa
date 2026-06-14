@@ -8,7 +8,6 @@ interface MountainArray {
 class HiddenMountainArray implements MountainArray {
 
     private int[] arr;
-
     public HiddenMountainArray(int[] arr) {
         this.arr = arr;
     }
@@ -64,7 +63,7 @@ public class findInMountainArrayLeetcode {
 
         while (start<=end) {
             int mid = start + (end-start)/2;
-            int value = mountainArr.get(mid);
+            int value = mountainArr.get(mid);  //nums[mid]
 
             if (value == target)     return mid;
             if (isAsc) { //asc

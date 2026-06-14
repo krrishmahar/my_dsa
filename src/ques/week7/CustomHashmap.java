@@ -1,8 +1,5 @@
 package ques.week7;
 
-import javax.swing.text.html.parser.Entity;
-import java.util.Map;
-
 class mapUsingHash{
     private Entity[] entities;
 

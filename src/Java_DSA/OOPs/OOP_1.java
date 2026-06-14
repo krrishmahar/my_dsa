@@ -1,8 +1,7 @@
 package Java_DSA.OOPs;
 
-import java.util.Arrays;
-
 public class OOP_1 {
+    static final int MINIMUM_MARKS = 35;
 
     static class Student {
         int id;
@@ -39,6 +38,13 @@ public class OOP_1 {
         Student(String name, int id, float mark) {
             this.marks = mark;
             this.name = name;
+            this.id = id;
+        }
+
+        //4th one
+        Student(String name, int id) {
+            this.name = name;
+            marks = MINIMUM_MARKS;
             this.id = id;
         }
 

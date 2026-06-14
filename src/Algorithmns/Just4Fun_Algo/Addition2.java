@@ -1,10 +1,6 @@
 package Algorithmns.Just4Fun_Algo;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Addition2 {
 
     static int addition(int n) {

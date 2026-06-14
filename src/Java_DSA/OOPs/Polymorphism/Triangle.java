@@ -1,7 +1,5 @@
 package Java_DSA.OOPs.Polymorphism;
 
-import java.util.Arrays;
-
 public class Triangle extends Shapes {
 
     @Override

@@ -9,8 +9,6 @@ package Java_DSA.Arrays;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Arrays_05 {
     public static void main(String[] args) {

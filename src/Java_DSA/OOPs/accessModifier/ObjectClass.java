@@ -1,7 +1,5 @@
 package Java_DSA.OOPs.accessModifier;
 
-import Java_DSA.OOPs.Human;
-
 public class ObjectClass {
 
 //    Object class is class which is internally implemented to all objs made since java doesn't support multiple inheritance

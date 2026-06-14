@@ -13,6 +13,7 @@ public class Main {
         Daughter daughter = new Daughter(21);
         son.career();
         son.partner();
+        System.out.println(daughter.VALUE);
 
         Parent.hello();
 

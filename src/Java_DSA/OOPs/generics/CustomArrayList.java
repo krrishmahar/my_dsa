@@ -1,7 +1,5 @@
 package Java_DSA.OOPs.generics;
 
-import java.util.ArrayList;
-
 public class CustomArrayList {
 
     private int[] data;

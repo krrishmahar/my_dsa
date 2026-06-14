@@ -1,10 +1,5 @@
 package ques.week2;
 
-import Java_DSA.OOPs.EnumExample.A;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class pivotInRotatedArray {
     public static void main(String[] args) {
 //        int[] nums = {

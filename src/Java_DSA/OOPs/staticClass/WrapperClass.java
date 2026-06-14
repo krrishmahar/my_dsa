@@ -28,7 +28,8 @@ public class WrapperClass {
 //        final keyword:
 //        (if there is final keyword, convention is that it is capital)
 //        always initialize while declaring it since it is immutable
-        final int count = 3;// all below eg gives error
+        final int COUNT = 3;// all below eg gives error // USED AS CONSTANT
+        final float PI = 3.14253f;
 //            count++;//            --count;//            count = 11;
 //        final int[] arr = {1,2,3,4,5};
 //        arr = new int[]{6, 7, 8, 9, 10};
