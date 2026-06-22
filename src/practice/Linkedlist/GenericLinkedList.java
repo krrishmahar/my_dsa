@@ -13,7 +13,7 @@ abstract class AbstractLinkedList<T> implements ListOperations<T> {
 }
 
 public class GenericLinkedList<T> extends AbstractLinkedList<T> {
-    private static class Node<T> {
+    static class Node<T> {
         T value;
         Node<T> next;
 
@@ -32,6 +32,10 @@ public class GenericLinkedList<T> extends AbstractLinkedList<T> {
     }
 
     Node<T> head;
+
+    Node<T> getHead() {
+        return head;
+    }
 
     @Override
     public void add(T value) {

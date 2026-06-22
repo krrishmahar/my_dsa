@@ -30,6 +30,7 @@ public class Main extends LinkedList_XX {
 
         while (node.next != null) {
             if (node.value == node.next.value) {
+                //1 -> 1,1,2  node = 1 node.next.next = 2
                 node.next = node.next.next;
             } else {
                 node = node.next;

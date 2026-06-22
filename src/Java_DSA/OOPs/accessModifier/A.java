@@ -19,4 +19,8 @@ public class A {
     public void setNum(int num) {
         this.num = num;
     }
+
+    protected void myName(String str){
+        System.out.println("Hello World, " + str);
+    }
 }

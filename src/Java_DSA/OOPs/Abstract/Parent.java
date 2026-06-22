@@ -6,7 +6,9 @@ public abstract class Parent {
     int age;
     final int VALUE;
 
-    public Parent(int age, int val) {
+
+
+    Parent(int age, int val) {
         this.age = age;
         this.VALUE = val;
     }
