@@ -1,4 +1,4 @@
-package Java_DSA.BinaryTree.LinkedList;
+package Java_DSA.Tree.binarytree.LinkedList;
 
 import java.util.List;
 
@@ -90,10 +90,11 @@ public class BinarySearchTree {
         if ( s >= e ){
             return;
         }
-        int mid = s + (e-s)/2;
-        this.insert(list.get(mid));
-        populateSorted(list, s, mid);
-        populateSorted(list, mid+1, e);
+        int mid = s + (e-s)/2; // O(1)
+        this.insert(list.get(mid)); //O(n)
+        populateSorted(list, s, mid); // O(log n) left
+        populateSorted(list, mid+1, e); // O(log n) right
+///        Total Time Complexity -> O(n * log n)
     }
 
     public void traverse(TraversalType type){

@@ -1,6 +1,5 @@
-package Java_DSA.BinaryTree.LinkedList;
+package Java_DSA.Tree.binarytree.LinkedList;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 class BinaryTree {
@@ -24,10 +23,10 @@ class BinaryTree {
     // Public method to kick off the insertion process
     public void populate() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the root node value: ");
-        String input = sc.next();
 
-        try {
+        try (sc) {
+            System.out.print("Enter the root node value: ");
+            String input = sc.next();
             int val = Integer.parseInt(input);
             root = new Node(val);
             // Recursively populate the rest of the tree
@@ -53,16 +52,16 @@ class BinaryTree {
         }
 
         // 2. Handle Right Child
-        System.out.printf("Enter right child of %d (or '-' to skip): ", currentNode.value);
-        String rightInput = sc.next();
-        if (!rightInput.equals("-")) {
-            try {
-                int rightVal = Integer.parseInt(rightInput);
-                currentNode.right = new Node(rightVal);
-                populateRecursive(sc, currentNode.right); // Drill down right
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input, skipping right child.");
-            }
+            System.out.printf("Enter right child of %d (or '-' to skip): ", currentNode.value);
+            String rightInput = sc.next();
+            if (!rightInput.equals("-")) {
+                try {
+                    int rightVal = Integer.parseInt(rightInput);
+                    currentNode.right = new Node(rightVal);
+                    populateRecursive(sc, currentNode.right); // Drill down right
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input, skipping right child.");
+                }
         }
     }
 

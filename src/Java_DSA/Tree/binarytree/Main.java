@@ -1,12 +1,7 @@
-package Java_DSA.BinaryTree;
+package Java_DSA.Tree.binarytree;
 
-import Java_DSA.BinaryTree.LinkedList.BinarySearchTree;
-import Java_DSA.BinaryTree.LinkedList.TraversalType;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+import Java_DSA.Tree.binarytree.LinkedList.BinarySearchTree;
+import Java_DSA.Tree.binarytree.LinkedList.TraversalType;
 
 public class Main {
 
