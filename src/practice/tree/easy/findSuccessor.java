@@ -1,4 +1,6 @@
-package practice.tree;
+package practice.tree.easy;
+
+import practice.tree.TreeNode;
 
 import java.util.*;
 
