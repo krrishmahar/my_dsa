@@ -13,7 +13,7 @@ abstract class AbstractLinkedList<T> implements ListOperations<T> {
 }
 
 public class GenericLinkedList<T> extends AbstractLinkedList<T> {
-    static class Node<T> {
+    public static class Node<T> {
         T value;
         Node<T> next;
 
@@ -53,7 +53,8 @@ public class GenericLinkedList<T> extends AbstractLinkedList<T> {
 
     @Override
     public void reverse() {
-        if (size < 2)   return;
+//        if (size < 2)   return;
+        if (head == null || head.next == null)  return;
         Node<T> prev = null;
         Node<T> curr = head;
         Node<T> next = curr.next;
