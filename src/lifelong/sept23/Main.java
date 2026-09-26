@@ -12,8 +12,8 @@ public class Main {
         - Find the Duplicate Number ✅
         - Duplicate Zeros ✅
         - Remove Duplicates from Sorted Array II ✅
-        - Remove Duplicates from Sorted List II ✅
         - Remove Duplicates from Sorted List
+        - Remove Duplicates from Sorted List II ✅
     */
 
     /// REVISION BELOW
@@ -37,7 +37,14 @@ public class Main {
         ques4.add(2);
         ques4.add(3);
         ques4.display();
-//        ListNode ans = deleteDuplicates(ques4);
+        ListNode node = new ListNode(10);
+        ListNode node2= new ListNode(10);
+        node.next =node2;
+        node2.next=new ListNode(11);
+
+        ListNode ans = deleteDuplicates(node);
+        System.out.println(node.next.getVal());
+
 
     }
 /*  Q1
@@ -123,14 +130,33 @@ E.g: Input: arr = [1,0,2,3,0,4,5,0] -> [1,0,0,2,3,0,0,4|,5,0,0]
         return l;
     }
 
-/*  Q3
+/*  Q4 Remove Duplicates from Sorted List
+    Given the head of a sorted linked list, delete all duplicates such that each element appears only once.
+    Return the linked list sorted as well.
+    E.g: Input: head = [1,1,2]
+         Output: [1,2]
+*/
+    public static ListNode deleteDuplicates(ListNode head) {
+        if (head == null)  return head;
+        ListNode temp = head;
+        while (temp.next != null) {
+            if (temp.getVal() == temp.next.getVal()) {
+                temp.next = temp.next.next;
+            }else {
+                temp = temp.next;
+            }
+        }
+        return head;
+    }
+
+/*  Q5
     You are given the head of a sorted linked list.
     Delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
     Return the linked list sorted as well.
     E.g: Input: head = [1,2,3,3,4,4,5]
          Output: [1,2,5]
 */
-    public static ListNode deleteDuplicates(ListNode head) {
+    public static ListNode deleteDuplicates2(ListNode head) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
 
