@@ -8,11 +8,11 @@ public class Main {
     /*
    Questions I did today were:
        - Squares of a Sorted Array
-       - 3Sum
-       - 3Sum Closest
-       - Subarray Product Less Than K
-       - Sort Colors (leetcode) / Dutch National Flag problem
-       - 4Sum --> 2 ways - triple loop O(n3) time
+       - 3Sum ✅
+       - 3Sum Closest ✅
+       - Subarray Product Less Than K ✅
+       - Sort Colors (leetcode) / Dutch National Flag problem ✅
+       - 4Sum --> 2 ways - triple loop O(n3) time ✅
                          - kSum with same O(n3) time n cube
    */
     static void main() {
@@ -115,7 +115,85 @@ public class Main {
                 }
             }
         }
-
         return count;
+    }
+
+    public int numSubarrayProductLessThanK(int[] nums, int k) {
+        if (k<=1)   return 0;
+        int l=0, prod=1, count=0;
+
+        for (int r =0; r<nums.length; r++) {
+            prod *= nums[r];
+            while (prod >= k) {
+                prod /= nums[l];
+                l++;
+            }
+            count += r - l +1;
+        }
+        return count;
+    }
+
+    //Dutch National Flag or Sort Colors problem
+    public void sortColors(int[] nums) {
+        int low =0, mid=0, high=nums.length-1;
+        while (mid <= high) {
+            if (nums[mid] == 0) {
+                swap(nums, mid++, low++);
+            } else if (nums[mid] == 1) {
+                mid++;
+            } else {
+                swap(nums, mid, high--);
+            }
+        }
+    }
+    private static void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+    //4Sum
+    public List<List<Integer>> foursum(int[] nums, int target) {
+        Arrays.sort(nums);
+        List<List<Integer>> res = new ArrayList<>();
+
+        //4Sum
+        int n= nums.length;
+        if (n<4)    return res;
+        for (int i =0; i<n-3; i++) {
+            if (i>0 && nums[i] == nums[i-1]){
+                continue;
+            }
+            for (int j = i+1; j < n-2; j++) {
+                if (j>i+1 && nums[j] == nums[j-1]) {
+                    continue;
+                }
+                //2Sums
+                int left = j+1;
+                int right= n-1;
+                while (left < right) {
+                    long sum = (long) nums[i] + nums[j] + nums[left] + nums[right];
+                    if (sum < target) {
+                        left++;
+                    }
+                    else if (sum > target) {
+                        right--;
+                    }else {
+                        res.add(List.of(nums[i], nums[j], nums[left], nums[right]));
+                        left++;
+                        right--;
+
+                        while (left<right && nums[left] == nums[left-1]) left++;
+                        while (left<right && nums[right] == nums[right+1]) right--;
+                    }
+                }
+            }
+        }
+        return res;
+    }
+
+    //KSum
+    public List<List<Integer>> kSum(int[] nums, int target) {
+
     }
 }
